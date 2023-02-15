@@ -8,7 +8,8 @@ const Home = () => {
     const dispatch = useDispatch();
     const filters = useSelector((state) => state.filter.filters);
     const { stock, brands } = filters;
-    console.log(stock, brands);
+    const cart = useSelector((state) => state.product.cart);
+    // console.log(cart[cart.length - 1]);
     useEffect(() => {
         fetch("http://localhost:5000/products")
             .then((res) => res.json())

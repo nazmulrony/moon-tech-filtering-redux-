@@ -8,7 +8,7 @@ const initialState = {
     keywords: [],
 };
 const filterReducer = (state = initialState, action) => {
-    console.log(action);
+    // console.log(action);
     switch (action.type) {
         case TOGGLE_BRAND:
             if (state.filters.brands.includes(action.payload)) {
